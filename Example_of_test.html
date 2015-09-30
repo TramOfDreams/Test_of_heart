@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://fillo.fshome/share/test.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Пример тестирования</title>
+        <style>
+            #kaza > .heart {
+                width: 400px;
+                height: 360px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+            }
+
+            #kaza > .heart::before,
+            #kaza > .heart::after {
+                position: absolute;
+                content: "";
+                left: 200px;
+                top: 0;
+                width: 200px;
+                height: 320px;
+                background: darkred;
+                -moz-border-radius: 200px 200px 0 0;
+                border-radius: 200px 200px 0 0;
+                -webkit-transform: rotate(-45deg);
+                   -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                     -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                -webkit-transform-origin: 0 100%;
+                   -moz-transform-origin: 0 100%;
+                    -ms-transform-origin: 0 100%;
+                     -o-transform-origin: 0 100%;
+                        transform-origin: 0 100%;
+            }
+
+            #kaza > .heart::after {
+                left: 0;
+                -webkit-transform: rotate(45deg);
+                   -moz-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                     -o-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                -webkit-transform-origin: 100% 100%;
+                   -moz-transform-origin: 100% 100%;
+                    -ms-transform-origin: 100% 100%;
+                     -o-transform-origin: 100% 100%;
+                        transform-origin :100% 100%;
+            }
+
+            #kaza > .info {
+                width: 100%;
+                height: 100%;
+                display: none;
+                position: absolute;
+                z-index: 1;
+            }
+
+            #kaza > .info > .text {
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                width: 100%;
+                color: green;
+                font-size: 30px;
+
+            }
+
+            #kaza > .info:active,
+            #kaza > .info:hover {
+                display: block;
+            }
+
+            #kaza {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 400px;
+                height: 360px;
+            }
+
+            #kaza:active > .info { display: block; }
+
+            #kaza-info {
+                z-index: -1;
+                position: fixed;
+                right: 0;
+                top: 0;
+                padding: 15px;
+                border-left: 3px dotted black;
+                border-bottom: 3px dotted black;
+                background: rgba(0, 0, 0, .1);
+                max-width: 400px;
+            }
+
+            #kaza-info > h3:first-child {
+                margin-top: 0;
+            }
+
+            #kaza-info > p {
+                margin: 0;
+            }
+            </style>
+    <style type="text/css"></style></head>
+    <body>
+
+        <!-- kaza area -->
+        <div id="kaza">
+
+            <!-- heart -->
+            <div class="heart"></div>
+            <!-- /heart -->
+
+            <!-- AUM info -->
+            <div class="info">
+                <div class="text">
+                    Аум!
+                </div>
+            </div>
+            <!--/ AUM info -->
+
+        </div>
+        <!-- /kaza area -->
+
+        <!-- kaza info (not test it!) -->
+        <div id="kaza-info">
+            <h3>Как это работает</h3>
+            <p>
+                Если навести мышку на сердце и кликнуть, то появится надпись снизу "Аум!",
+                которая исчезнет только в том случае, если мышку убрать с области сердца.
+            </p>
+            <h3>Что надо сделать</h3>
+            <p>
+                Протестировать поведение этого элемента.
+            </p>
+            <h3>Помощь</h3>
+            <p>
+                Тебе понадобится
+                <a href="https://selenium-python.readthedocs.org/api.html#module-selenium.webdriver.common.action_chains" target="_blank">вот эта</a>
+                штука.
+            </p>
+            <h3>Для продвинутых хомяков</h3>
+            <p>
+                Стоит разобраться с тем, как работает эта страница, скачать ее,
+                оформить в репозиторий вместе с тестом и выложить на гитхаб.
+            </p>
+        </div>
+        <!-- /kaza info -->
+
+    
+<div id="SL_balloon_obj" alt="0" style="display: block;"><div id="SL_button" class="ImTranslatorLogo" style="display: none; left: 579px; top: 96px; opacity: 0.4; background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/imtranslator-s.png);"></div><div id="SL_shadow_translation_result2" style="display: none; font-size: 12px; line-height: 18px;"></div><div id="SL_shadow_translator"><div id="SL_planshet" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg2.png) rgb(244, 245, 245);"><div id="SL_TB"><div id="bubblelogo" class="ImTranslatorLogo" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/imtranslator-s.png);"></div><table id="SL_tables" cellspacing="1"><tr><td class="SL_td" width="10%" align="right"><input id="SLloc" type="checkbox" title="Зафиксировать язык"></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_from"><option value="auto">Определить язык</option><option value="az">Азербайджанский</option><option value="sq">Албанский</option><option value="en">Английский</option><option value="ar">Арабский</option><option value="hy">Армянский</option><option value="af">Африкаанс</option><option value="eu">Баскский</option><option value="be">Белорусский</option><option value="bn">Бенгальский</option><option value="my">Бирманский</option><option value="bg">Болгарский</option><option value="bs">Боснийский</option><option value="cy">Валлийский</option><option value="hu">Венгерский</option><option value="vi">Вьетнамский</option><option value="gl">Галисийский</option><option value="el">Греческий</option><option value="ka">Грузинский</option><option value="gu">Гуджарати</option><option value="da">Датский</option><option value="zu">Зулу</option><option value="iw">Иврит</option><option value="ig">Игбо</option><option value="yi">Идиш</option><option value="id">Индонезийский</option><option value="ga">Ирландский</option><option value="is">Исландский</option><option value="es">Испанский</option><option value="it">Итальянский</option><option value="yo">Йоруба</option><option value="kk">Казахский</option><option value="kn">Каннада</option><option value="ca">Каталанский</option><option value="zh-CN">Китайский (Трад)</option><option value="zh-TW">Китайский (Упр)</option><option value="ko">Корейский</option><option value="ht">Креольский (Гаити)</option><option value="km">Кхмерский</option><option value="lo">Лаосский</option><option value="la">Латинский</option><option value="lv">Латышский</option><option value="lt">Литовский</option><option value="mk">Македонский</option><option value="mg">Малагасийский</option><option value="ms">Малайский</option><option value="ml">Малайялам</option><option value="mt">Мальтийский</option><option value="mi">Маори</option><option value="mr">Маратхи</option><option value="mn">Монгольский</option><option value="de">Немецкий</option><option value="ne">Непали</option><option value="nl">Нидерландский</option><option value="no">Норвежский</option><option value="pa">Панджаби</option><option value="fa">Персидский</option><option value="pl">Польский</option><option value="pt">Португальский</option><option value="ro">Румынский</option><option value="ru">Русский</option><option value="ceb">Себуанский</option><option value="sr">Сербский</option><option value="st">Сесото</option><option value="si">Сингальский</option><option value="sk">Словацкий</option><option value="sl">Словенский</option><option value="so">Сомали</option><option value="sw">Суахили</option><option value="su">Суданский</option><option value="tl">Тагальский</option><option value="tg">Таджикский</option><option value="th">Тайский</option><option value="ta">Тамильский</option><option value="te">Телугу</option><option value="tr">Турецкий</option><option value="uz">Узбекский</option><option value="uk">Украинский</option><option value="ur">Урду</option><option value="fi">Финский</option><option value="fr">Французский</option><option value="ha">Хауса</option><option value="hi">Хинди</option><option value="hmn">Хмонг</option><option value="hr">Хорватский</option><option value="ny">Чева</option><option value="cs">Чешский</option><option value="sv">Шведский</option><option value="eo">Эсперанто</option><option value="et">Эстонский</option><option value="jw">Яванский</option><option value="ja">Японский</option></select></td><td class="SL_td" width="3" align="center"><div id="SL_switch_b" title="Перевернуть языки" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/switchb.png);"></div></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_to"><option value="az">Азербайджанский</option><option value="sq">Албанский</option><option value="en">Английский</option><option value="ar">Арабский</option><option value="hy">Армянский</option><option value="af">Африкаанс</option><option value="eu">Баскский</option><option value="be">Белорусский</option><option value="bn">Бенгальский</option><option value="my">Бирманский</option><option value="bg">Болгарский</option><option value="bs">Боснийский</option><option value="cy">Валлийский</option><option value="hu">Венгерский</option><option value="vi">Вьетнамский</option><option value="gl">Галисийский</option><option value="el">Греческий</option><option value="ka">Грузинский</option><option value="gu">Гуджарати</option><option value="da">Датский</option><option value="zu">Зулу</option><option value="iw">Иврит</option><option value="ig">Игбо</option><option value="yi">Идиш</option><option value="id">Индонезийский</option><option value="ga">Ирландский</option><option value="is">Исландский</option><option selected="selected" value="es">Испанский</option><option value="it">Итальянский</option><option value="yo">Йоруба</option><option value="kk">Казахский</option><option value="kn">Каннада</option><option value="ca">Каталанский</option><option value="zh-CN">Китайский (Трад)</option><option value="zh-TW">Китайский (Упр)</option><option value="ko">Корейский</option><option value="ht">Креольский (Гаити)</option><option value="km">Кхмерский</option><option value="lo">Лаосский</option><option value="la">Латинский</option><option value="lv">Латышский</option><option value="lt">Литовский</option><option value="mk">Македонский</option><option value="mg">Малагасийский</option><option value="ms">Малайский</option><option value="ml">Малайялам</option><option value="mt">Мальтийский</option><option value="mi">Маори</option><option value="mr">Маратхи</option><option value="mn">Монгольский</option><option value="de">Немецкий</option><option value="ne">Непали</option><option value="nl">Нидерландский</option><option value="no">Норвежский</option><option value="pa">Панджаби</option><option value="fa">Персидский</option><option value="pl">Польский</option><option value="pt">Португальский</option><option value="ro">Румынский</option><option value="ru">Русский</option><option value="ceb">Себуанский</option><option value="sr">Сербский</option><option value="st">Сесото</option><option value="si">Сингальский</option><option value="sk">Словацкий</option><option value="sl">Словенский</option><option value="so">Сомали</option><option value="sw">Суахили</option><option value="su">Суданский</option><option value="tl">Тагальский</option><option value="tg">Таджикский</option><option value="th">Тайский</option><option value="ta">Тамильский</option><option value="te">Телугу</option><option value="tr">Турецкий</option><option value="uz">Узбекский</option><option value="uk">Украинский</option><option value="ur">Урду</option><option value="fi">Финский</option><option value="fr">Французский</option><option value="ha">Хауса</option><option value="hi">Хинди</option><option value="hmn">Хмонг</option><option value="hr">Хорватский</option><option value="ny">Чева</option><option value="cs">Чешский</option><option value="sv">Шведский</option><option value="eo">Эсперанто</option><option value="et">Эстонский</option><option value="jw">Яванский</option><option value="ja">Японский</option></select></td><td class="SL_td" width="5%" align="center"> </td><td class="SL_td" width="8%" align="center"><div id="SL_TTS_voice" title="Прослушать" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/tts-voice.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_copy" title="Скопировать" class="SL_copy_hand" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/copy_hand.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_font_patch" onclick="alert(chrome.i18n.getMessage(&#39;extNot_available&#39;))"></div><div id="SL_bbl_font" title="Размер шрифта" class="SL_font_off" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/font-off.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_TH" title="История переводов" class="SL_TH" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/history.png);"></div></td><td class="SL_td" width="18%"></td><td class="SL_td" width="8%" align="right"><div id="SL_pin" title="Закрепить всплывающее окно" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/pin-on.png);"></div></td></tr></table></div></div><div id="SL_shadow_translation_result" style="font-size: 12px; line-height: 18px; background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg.png) rgb(255, 255, 255);"></div><div id="SL_player2"></div><div id="SL_alert100" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg2.png);">Звуковая функция ограничена 100 символами</div><div id="SL_bbl_donate" title="Сделать пожертвование" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/donate2.png);"></div><div id="SL_Balloon_options" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg3.png) rgb(244, 245, 245);"><a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options-bbl.html" target="_blank" class="SL_options" title="Показать настройки">Настройки</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/history.html" target="_blank" class="SL_options" title="История переводов">История</a> : <a href="http://about.imtranslator.net/tutorials/presentations/imtranslator-for-chrome/chrome-bubble-translator/" target="_blank" class="SL_options" title="Справка ImTranslator">Справка</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/feedback.html" target="_blank" class="SL_options" title="Обратная связь">Обратная связь</a><span id="SL_Balloon_Close" title="Закрыть">Закрыть</span></div></div></div></body></html>
