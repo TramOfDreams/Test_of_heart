@@ -14,15 +14,14 @@ class MouseOnHeart(unittest.TestCase):
 
     def test_click_on_heart(self):
          self.driver.get('http://fillo.fshome/share/test.html')
+         WebDriverWait(self.driver, 5).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, '.text')))
+         
          heart = self.driver.find_element_by_css_selector('.heart')
          ActionChains(self.driver).move_to_element(heart).drag_and_drop(heart,heart).perform()
-         WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'div.text')))
-         #div = self.driver.find_element_by_css_selector('.text[div*=!]')
-         #print(div)
-         #param = u'Аум!'
-         not_heart = self.driver.find_element_by_css_selector(':not(.heart)')
-         ActionChains(self.driver).move_to_element(not_heart).click_and_hold().perform()
-         self.assertTrue(self.driver.find_element_by_css_selector('.heart:not(hover)'))
+         WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '.text')))
+         
+         ActionChains(self.driver).move_by_offset(200,180).perform()
+         WebDriverWait(self.driver, 5).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, '.text')))
 
     def tearDown(self):
         self.driver.close()
